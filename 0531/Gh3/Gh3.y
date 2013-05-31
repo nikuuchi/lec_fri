@@ -3,10 +3,10 @@
 		return 0;
 	}
 %}
-%start
-%token
+%start S
+%token EOLN NUMBER REGISTER PLUS MUL SUB DIV
 %%
-S :
+S : S PLUS T
   |
   ;
 
