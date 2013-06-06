@@ -1,8 +1,14 @@
 numb [0-9]+
 reg  S[0-9]
 %%
-{numb} {return NUMBER;}
-{reg}  {return REGISTER;}
+{numb} {
+            sscanf(yytext, "%d", &yylval);
+            return NUMBER;
+       }
+{reg}  {
+            sscanf(yytext, "%d", &yylval);
+            return REGISTER;
+       }
 \+     {return PLUS;}
 \-     {return SUB;}
 \*     {return MUL;}
