@@ -6,7 +6,7 @@ reg  S[0-9]
             return NUMBER;
        }
 {reg}  {
-            sscanf(yytext, "%d", &yylval);
+            sscanf(yytext, "S%d", &yylval);
             return REGISTER;
        }
 \+     {return PLUS;}
@@ -15,5 +15,7 @@ reg  S[0-9]
 \/     {return DIV;}
 \(     {return LPAREN;}
 \)     {return RPAREN;}
+\=     {return EQ;}
 (\ |\t|\n)* {/* nop */}
 %%
+
