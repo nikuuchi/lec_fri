@@ -13,9 +13,16 @@ reg  S[0-9]
 \-     {return SUB;}
 \*     {return MUL;}
 \/     {return DIV;}
+\<     {return LT;}
+\<=    {return LTE;}
+\>     {return GT;}
+\>=    {return GTE;}
 \(     {return LPAREN;}
 \)     {return RPAREN;}
-\=     {return EQ;}
+\=     {return AS;}
+\==    {return EQ;}
+\!=    {return NEQ;}
+\n     {return EOLN; }
 (\ |\t|\n)* {/* nop */}
 %%
 

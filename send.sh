@@ -1,3 +1,3 @@
 #!/bin/bash
 
-scp -r $1 "ynu:~/lec_fri/${1}"
+scp -r $1 "ynu:~/lec_fri/"
